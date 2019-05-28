@@ -47,6 +47,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/portfolio', (req, res) => {
+  res.render('portfolio.hbs', {
+    pageTitle : 'Portfolio Page',
+    welcomeMessage : 'This is the home page Welcome to this site'
+  });
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage : 'Error Loading Page'
